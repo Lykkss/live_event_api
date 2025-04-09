@@ -219,7 +219,7 @@ Installation en Environnement de Développement
 
 Cloner le Projet
 
-git clone https://votre-dépôt.git
+git clone https://github.com/Lykkss/live_event_api.git
 cd live_event_api
 Créer et Activer l’Environnement Conda
 
@@ -298,7 +298,7 @@ Configurez des backups réguliers et un système de monitoring pour l’applicat
 Utilisation de l'Interface d’Administration
 L’interface d’administration Django est accessible via :
 
-http://yourdomain.com/admin/
+localhost:8000/admin/
 Connectez-vous avec le compte superutilisateur pour gérer manuellement les enregistrements des modèles (Organisateur, Lieu, Catégorie, Concert).
 
 Notes et Améliorations Futures
