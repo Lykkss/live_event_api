@@ -58,11 +58,7 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "https://react-frontend-mspr2.vercel.app",
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 ROOT_URLCONF = 'live_event_api.urls'
