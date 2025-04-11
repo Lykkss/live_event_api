@@ -20,11 +20,11 @@ class CategorieSerializer(serializers.ModelSerializer):
 
 class ConcertSerializer(serializers.ModelSerializer):
     # Pour l'affichage détaillé en lecture
-    lieu = LieuSerializer(read_only=True)
+    lie = LieuSerializer(read_only=True)
     organisateur = OrganisateurSerializer(read_only=True)
     categorie = CategorieSerializer(read_only=True)
     # Pour la création/mise à jour, on attend les identifiants (FK)
-    lieu_id = serializers.PrimaryKeyRelatedField(queryset=Lieu.objects.all(), source='lieu', write_only=True)
+    lieu_id = serializers.PrimaryKeyRelatedField(queryset=Lieu.objects.all(), source='lie', write_only=True)
     organisateur_id = serializers.PrimaryKeyRelatedField(queryset=Organisateur.objects.all(), source='organisateur', write_only=True)
     categorie_id = serializers.PrimaryKeyRelatedField(queryset=Categorie.objects.all(), source='categorie', write_only=True)
 
@@ -37,6 +37,6 @@ class ConcertSerializer(serializers.ModelSerializer):
             'price',
             'dateStart',
             'dateEnd',
-            'lieu', 'lieu_id', 'organisateur', 'organisateur_id', 'categorie', 'categorie_id',
+            'lie', 'lieu_id', 'organisateur', 'organisateur_id', 'categorie', 'categorie_id',
         ]
-        read_only_fields = ['id', 'lieu', 'organisateur', 'categorie']
+        read_only_fields = ['id', 'lie', 'organisateur', 'categorie']
