@@ -30,10 +30,10 @@ class Concert(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)
     dateStart = models.DateTimeField()
     dateEnd = models.DateTimeField()
-    lieu = models.ForeignKey(Lieu, on_delete=models.CASCADE, related_name='concerts')
-    organisateur = models.ForeignKey(Organisateur, on_delete=models.CASCADE, related_name='concerts')
+    lieu_id = models.ForeignKey(Lieu, on_delete=models.CASCADE, related_name='concerts')
+    organisateur_id = models.ForeignKey(Organisateur, on_delete=models.CASCADE, related_name='concerts')
     # Autoriser temporairement des valeurs NULL pour le champ categorie
-    categorie = models.ForeignKey(
+    categorie_id = models.ForeignKey(
         Categorie,
         on_delete=models.CASCADE,
         related_name='concerts',
