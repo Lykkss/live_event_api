@@ -38,6 +38,5 @@ class ConcertSerializer(serializers.ModelSerializer):
             'dateStart',
             'dateEnd',
             'lieu', 'organisateur', 'categorie',
-            'lieu_id', 'organisateur_id', 'categorie_id'
         ]
         read_only_fields = ['id', 'lieu', 'organisateur', 'categorie']
