@@ -24,9 +24,9 @@ class ConcertSerializer(serializers.ModelSerializer):
     organisateur = OrganisateurSerializer(read_only=True)
     categorie = CategorieSerializer(read_only=True)
     # Pour la création/mise à jour, on attend les identifiants (FK)
-    lieu_id = serializers.PrimaryKeyRelatedField(queryset=Lieu.objects.all(), source='lie')
-    organisateur_id = serializers.PrimaryKeyRelatedField(queryset=Organisateur.objects.all(), source='organisateur')
-    categorie_id = serializers.PrimaryKeyRelatedField(queryset=Categorie.objects.all(), source='categorie')
+    lieu = serializers.PrimaryKeyRelatedField(queryset=Lieu.objects.all(), source='lieu')
+    organisateur = serializers.PrimaryKeyRelatedField(queryset=Organisateur.objects.all(), source='organisateur')
+    categorie = serializers.PrimaryKeyRelatedField(queryset=Categorie.objects.all(), source='categorie')
 
     class Meta:
         model = Concert
