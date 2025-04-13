@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)i$w-*je=7y$vp22&$u_wsifaqil07e4aas*4j1xzp)s3#pfed
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -128,7 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = "staticfiles/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
@@ -139,7 +139,7 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     # Si tu veux ajouter ton gestionnaire global d’exceptions :
-    'EXCEPTION_HANDLER': 'gestion_concerts_project.exceptions.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'mspr2_api.exceptions.custom_exception_handler',
 }
 
 SIMPLE_JWT = {
