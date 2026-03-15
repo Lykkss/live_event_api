@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)i$w-*je=7y$vp22&$u_wsifaqil07e4aas*4j1xzp)s3#pfed'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["api.live-event.valentin-bancel.com", "live-event.valentin-bancel.com"]
 
 CORS_ALLOW_HEADERS = (
     "accept",
