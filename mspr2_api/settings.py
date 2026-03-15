@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-)i$w-*je=7y$vp22&$u_wsifaqil07e4aas*4j1xzp)s3#pfed
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["api.live-event.valentin-bancel.com", "live-event.valentin-bancel.com"]
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
+CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',')
 
 CORS_ALLOW_HEADERS = (
     "accept",
