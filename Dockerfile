@@ -25,4 +25,4 @@ RUN uv run python manage.py collectstatic --noinput || true
 EXPOSE 8655
 
 # Commande par défaut pour lancer le serveur
-CMD ["uv", "run", "gunicorn", "mspr2_api.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4"]
+CMD ["uv", "run", "gunicorn", "mspr2_api.wsgi:application", "--bind", "0.0.0.0:8655", "--workers", "4"]
