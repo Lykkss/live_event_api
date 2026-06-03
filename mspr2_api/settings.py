@@ -57,6 +57,11 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://api-live-event.lisaquaglieri.fr',
+    'https://live-event.lisaquaglieri.fr',
+]
+
 CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'mspr2_api.urls'
